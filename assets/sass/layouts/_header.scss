@@ -1,0 +1,16 @@
+.header {
+    @include flex-center;
+    width: 100%;
+    position: relative;
+    height: 63px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    // Positionnement de la flèche de retour //
+    
+    nav {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+    }
+}

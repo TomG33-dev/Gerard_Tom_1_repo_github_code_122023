@@ -1,0 +1,109 @@
+.functioning {
+    @include grid-center;
+
+    // Contenu des fonctionnalités //
+
+    &_container {
+        padding: 48px 0px 68px 0px;
+
+        h2 {
+            font-weight: 700;
+        }
+
+    // Contenu des fonctionnalités en desktop //
+
+        &_button {
+            margin-top: 25px;
+            display: grid;
+            gap: 25px;
+        
+            @media only screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: space-around;
+                width: 90vw;
+                max-width: 1080px;
+            }
+        }
+    }
+
+    // Boutons des fonctionnalités //
+
+    &_button {
+        display: flex;
+        width: 100%;
+        max-width: 323px;
+        height: 72px;
+        background: $color_bg_lightgrey;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        margin-left: 12px;
+        position: relative;
+        padding-right: 15px;
+        animation: fadeIn 1s ease-in-out;
+        animation-fill-mode: both;
+
+        &:nth-child(1) {
+            animation-delay: 1s;
+        }
+        
+        &:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        // Numéros des fonctionnalités //
+
+        span {
+            position: absolute;
+            top: 24px;
+            left: -12px;
+            color: $color_text_white;
+            background: $color_bg_purple;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+            @include flex-center;
+            font-weight: 500;
+            font-size: 14px;
+        }
+    
+        // Emplacement des icônes //
+
+        i {
+            width: 75px;
+            padding-left: 10px;
+            @include flex-center;
+            color: $color_bg_greyicon;
+        }
+
+        // Texte des fonctionnalités //
+
+        p {
+            @include flex-center;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    
+        // Hover des fonctionnalités //
+
+        &:hover ::before {
+            color: $color_bg_purple;
+        }
+    
+        &:hover {
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

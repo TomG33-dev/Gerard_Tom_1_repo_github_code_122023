@@ -1,0 +1,57 @@
+.headline {
+    @include flex-column-center;
+    padding: 30px 30px 100px 30px;
+    background: $color_bg_lightgrey;
+    position: relative;
+
+    // Positionnement du titre //
+
+    h2 {
+        margin: 10px 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        // Positionnement du titre en version desktop //
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    // Positionnement du texte //
+
+    &>p {
+        font-size: 17px;
+        color: $color_text_grey;
+    }
+
+    // Positionnement du bouton //
+
+    &_button {
+        position: absolute;
+        bottom: -60px;
+        padding: 30px 15px;
+        border-radius: 25px;
+        background: linear-gradient(to right, $color_button_bottom, $color_button_top 50%);
+        background-size: 200%;
+        box-shadow: map-get($box-shadow-values, normal);
+        transform: rotate(-90deg);
+        cursor: pointer;
+    
+        &:hover {
+            box-shadow: map-get($box-shadow-values, hover);
+            background-position: right;
+        }
+    
+        &:active {
+            box-shadow: map-get($box-shadow-values, active);
+        }
+    
+        a {
+            writing-mode: vertical-rl;
+            color: $color_text_white;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}

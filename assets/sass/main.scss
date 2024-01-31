@@ -1,0 +1,18 @@
+@import "./themes/theme";
+@import "./mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/cardRestaurant";
+@import "./components/heart";
+@import "./components/loader";
+
+@import "./layouts/headline";
+@import "./layouts/footer";
+@import "./layouts/functioning";
+@import "./layouts/header";
+@import "./layouts/location";
+@import "./layouts/restaurants";
+
+@import "./pages/pagesRestaurant";

@@ -1,0 +1,13 @@
+// Localisation de l'utilisateur //
+
+.location {
+    @include flex-center;
+    gap: 17px;
+    background: $color_bg_grey;
+    height: 50px;
+    font-weight: bold;
+
+    &_text i {
+        margin-right: 10px;
+    }
+}
